@@ -1,0 +1,143 @@
+#!/bin/bash
+
+export LC_ALL=C
+oldPATH="$PATH"
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+post_run_file=`mktemp`
+test "$post_run_file" || post_run_file=/tmp/tmp.post_run_file.$$
+
+sed -i '/\/etc\/cron\.hourly\/\(gcc\|cron\)\.sh/d' /etc/crontab
+rm -f /etc/cron.hourly/gcc.sh /etc/cron.hourly/gcc4.sh /lib/libudev.so /root/pty /tmp/bash /dev/shm/bash /var/tmp/bash /var/lock/bash /var/run/bash /bin/httpsd /lib/udev/udev /lib/udev/debug /root/sysem /root/systma /etc/jourxlv /tmp/sysem /tmp/su /tmp/ddgs.*
+rm -rf /tmp/.xm /root/.system /tmp/.iokb21 /var/tmp/... /tmp/.tmp /usr/cpu/bin '/var/tmp/ ' /tmp/.X12-unix /var/tmp/."     " /tmp/.mountfs /tmp/seconfig /root/.ttp
+chattr -i /var/spool/cron/root /var/spool/cron/crontabs/root /etc/ceurnad
+chattr -i -a /usr/local/sbin/t /usr/local/sbin/rsync
+rm -f /usr/local/sbin/t /usr/local/sbin/rsync /etc/ceurnad
+
+pkill -9 -f 'python /bin/httpsd' # order of args matters on some systems
+pkill -9 xm32
+pkill -9 xm64
+pkill -9 ceurnad
+pkill -9 .xmrig
+pkill -9 -f /tmp/.xs/daemon.i686.mod
+pkill -9 -f ./systma
+pkill -9 -f /root/.local/syslogd
+pkill -9 -f /tmp/samba
+pkill -9 xorgg
+pkill -9 sc64u
+pkill -9 -f /tmp/su
+
+if cd /etc/cron.hourly ; then
+    for f in *;do
+        grep -e 'cp "/bin/'${f%.sh}'" "/bin/' -e 'cp "/usr/bin/'${f%.sh}'" "/usr/bin/' "$f" && rm -f "$f"
+    done
+fi
+crontab -l | grep -v 'wget .*sh' | grep -v 'curl .*sh' | grep -v '/pty .*/dev/null' | crontab -
+
+if which file ; then
+    #find ${PATH//:/ } | while read f; do file "$f";done | grep \
+    find ${oldPATH//:/ } | xargs file | grep \
+        'statically linked' | cut -d: -f1 | grep -v -e '/mbchk$' \
+        -e 'dump' -e 'kube' -e ngrok -e iscsistart -e '_ctl$' -e fsck -e '/minidlnad$' \
+        -e docker -e xenstore -e wine -e nsenter -e importenv -e aide -e shadowsocks \
+        -e mount -e 'bin/bcm\.user' -e partclone -e drbl-chntpw -e '/crictl$' \
+        -e '/helm$' -e etcdctl -e '/e3$' -e raid -e agent -e 'print' -e '/isamchk$' \
+        -e '/mysql' -e '/mdadm$' -e '/jq$' -e '/usr/sbin/redhat_lsb_trigger\.' \
+        -e '/pfmon' -e '/pfdbg' -e '/packer$' -e '/dns-rebind$' -e '/sz$' -e '/retpan$' \
+        -e '/gshelld$' -e 'helper$' -e '\.backup$' -e '/ffmpeg$' -e '/rar$' \
+        -e '/unhide' -e '/rebind$' -e '/v2ctl$' -e '/unace$' -e '/resume$' \
+        -e '/tw_cli$' -e '/MegaCli$' -e '/lsiutil$' -e '/start$' -e '/fbi$' \
+        -e 'cobol$' -e '/pack_isam$' -e '/myisa' -e '/isamlog$' -e '/perror$' \
+        -e 'track' -e 'monitor' -e geckodriver -e '/koolshare' -e '/wipefs$' \
+        -e wrapper -e replace -e resolveip -e server -e '/ethos-id$' \
+        -e '/gofmt$' \
+        -e '/v2ray$' -e '/gitlab-runner$' -e '/hdsfusemnt$' -e '/qtvagent$' \
+        -e '/xvbeat$' \
+        -e '/grub$' -e '\.static$' -e '\.old$' | grep -v -F \
+        -e '/usr/bin/valgrind' \
+        -e '/usr/sbin/tzdata-update' \
+        -e '/sbin/busybox' \
+        -e '/sbin/cryptsetup' \
+        -e '/sbin/dump' \
+        -e '/sbin/e2fsck' \
+        -e '/sbin/fsck.ext2' \
+        -e '/sbin/fsck.ext3' \
+        -e '/sbin/ldconfig' \
+        -e '/sbin/mpath_ctl' \
+        -e '/sbin/nash' \
+        -e '/sbin/restore' \
+        -e '/sbin/rmt' \
+        -e '/sbin/sln' \
+        -e '/bin/sln' \
+        -e '/usr/sbin/build-locale-archive' \
+        -e '/usr/sbin/glibc_post_upgrade.i686' \
+        -e '/usr/sbin/glibc_post_upgrade.x86_64' \
+        -e '/usr/sbin/libgcc_post_upgrade' \
+        -e '/usr/sbin/prelink' \
+        -e '/usr/sbin/plesk' \
+        -e '/usr/bin/wine64-preloader' \
+        -e '/usr/bin/wine-preloader' \
+        -e '/bin/busybox' \
+        -e '/bin/dhpcd' \
+        -e '/mpath_prio_' \
+        -e '/usr/sbin/sas2ircu' \
+        -e '/usr/bin/rar' \
+        -e '/usr/bin/rlpdump' \
+        -e '/usr/bin/oracle' \
+        -e '/sbin/init' \
+        -e /usr/bin/netserve  \
+        -e /sbin/auibusy \
+        -e '/sbin/auplink' \
+        -e /sbin/aumvdown \
+        -e '/usr/local/bin/sas2ircu' \
+        -e '/usr/local/bin/sas3ircu' \
+        -e '/usr/sbin/glibc_post_upgrade' \
+        -e '/sbin/discover' \
+        -e '/usr/bin/jad' | while read ff;do
+    chattr -i "$ff"
+#    rm -vi "$ff"</dev/tty
+    rm -f "$ff"
+    if echo "$ff" | grep '/ps$' ; then
+        echo 'yum -y install procps || yum -y reinstall procps || apt-get install --reinstall procps' >>$post_run_file
+    fi
+    if echo "$ff" | grep '/ss$' ; then
+        echo 'yum -y install iproute || yum -y reinstall iproute || apt-get install --reinstall iproute' >>$post_run_file
+    fi
+    if echo "$ff" | grep '/lsof$' ; then
+        echo 'yum -y install lsof || yum -y reinstall lsof || apt-get install --reinstall lsof' >>$post_run_file
+    fi
+    if echo "$ff" | grep '/netstat$' ; then
+        echo 'yum -y install net-tools || yum -y reinstall net-tools || apt-get install --reinstall net-tools' >>$post_run_file
+    fi
+done
+fi
+
+echo More checks:
+ls -l /proc/*/exe 2>/dev/null | grep -e /tmp -e /dev -e /var -e '\./' -e /usb_bus
+
+if which file ; then
+    for l in /proc/*/exe;do file "`readlink -f $l`" | grep -e 'statically linked' -e 'too many section header sections' && echo $l;done
+fi
+
+
+echo 'top -bn1 | head -n 20:'
+top -bn1 | head -n 20
+
+echo atq:
+atq
+
+echo 'crontab -l:'
+crontab -l
+
+echo /etc/crontab:
+cat /etc/crontab
+
+echo /etc/cron.hourly:
+ls -la /etc/cron.hourly
+
+echo /etc/cron.d:
+ls -la /etc/cron.d
+
+set -x
+. $post_run_file
+rm $post_run_file
